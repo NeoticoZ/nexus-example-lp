@@ -1,0 +1,12 @@
+# NexusPay Landing Page
+# https://nexuspay.com.br
+
+User-agent: *
+Allow: /
+
+# Sitemap location (update with actual domain)
+Sitemap: https://nexuspay.com.br/sitemap.xml
+
+# Disallow admin/private areas if any
+Disallow: /admin/
+Disallow: /private/

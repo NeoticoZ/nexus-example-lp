@@ -1,0 +1,17 @@
+{
+  "name": "NexusPay",
+  "short_name": "NexusPay",
+  "description": "O Gateway de Pagamentos de Alta Conversão",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#22c55e",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
