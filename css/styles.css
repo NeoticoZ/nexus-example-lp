@@ -564,17 +564,367 @@ body {
 /* ============================================
    Responsive Adjustments
    ============================================ */
-@media (max-width: 768px) {
-    .hero-glow {
-        width: 400px;
-        height: 400px;
+
+/* Large Tablets & Small Desktops (max-width: 992px) */
+@media (max-width: 992px) {
+    .dashboard-card {
+        transform: none;
+    }
+    
+    .dashboard-container:hover .dashboard-card {
+        transform: none;
     }
 }
 
+/* Tablets (max-width: 768px) */
+@media (max-width: 768px) {
+    /* Hero Section */
+    .hero-glow {
+        width: 300px;
+        height: 300px;
+        filter: blur(60px);
+    }
+    
+    /* Navigation Links */
+    .nav-link {
+        font-size: 0.8125rem;
+        padding: 0.375rem 0.5rem;
+    }
+    
+    /* Buttons */
+    .btn-primary,
+    .btn-secondary {
+        font-size: 1rem;
+        padding: 0.875rem 2rem;
+    }
+    
+    /* Feature Icons */
+    .feature-icon {
+        width: 3rem;
+        height: 3rem;
+        margin-bottom: 1rem;
+    }
+    
+    .feature-icon svg {
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+    
+    /* Dashboard Mockup - Simplified for tablets */
+    .dashboard-card {
+        padding: 0.5rem;
+    }
+    
+    /* Reduce card padding on mobile */
+    .card-futuristic {
+        padding: 1.25rem;
+    }
+    
+    /* Pricing Cards */
+    .pricing-card {
+        padding: 1.5rem;
+    }
+}
+
+/* Mobile Devices (max-width: 640px) */
+@media (max-width: 640px) {
+    /* Base Typography Scale for Mobile */
+    body {
+        font-size: 15px;
+        line-height: 1.5;
+    }
+    
+    /* Hero Section - Increase top padding to avoid header overlap */
+    section[aria-labelledby="hero-title"] {
+        padding-top: 6rem !important;
+    }
+    
+    /* Hero Section Typography */
+    /* h1: 5xl -> ~2.5rem on mobile */
+    h1 {
+        font-size: clamp(2rem, 8vw, 2.75rem) !important;
+        line-height: 1.15 !important;
+    }
+    
+    /* Subheadline paragraph */
+    .hero-glow + div p,
+    .max-w-7xl p.text-lg,
+    .max-w-7xl p.sm\:text-xl {
+        font-size: 0.9375rem;
+        line-height: 1.6;
+    }
+    
+    /* Section Titles - h2 */
+    h2 {
+        font-size: clamp(1.5rem, 6vw, 2rem) !important;
+    }
+    
+    /* Section Descriptions */
+    section header p,
+    .text-gray-400.text-lg {
+        font-size: 0.9375rem;
+    }
+    
+    /* h3 - Card Titles */
+    h3 {
+        font-size: 1.125rem !important;
+    }
+    
+    /* Card Description Text */
+    .card-futuristic p,
+    article p.text-sm {
+        font-size: 0.875rem;
+        line-height: 1.55;
+    }
+    
+    /* Buttons */
+    .btn-primary,
+    .btn-secondary {
+        font-size: 0.9375rem;
+        padding: 0.875rem 1.5rem;
+        width: 100%;
+    }
+    
+    /* Footer Text */
+    .footer-link {
+        font-size: 0.8125rem;
+    }
+    
+    footer p.text-xs {
+        font-size: 0.6875rem;
+    }
+    
+    /* Dashboard Mockup - Further simplified */
+    .dashboard-card {
+        padding: 0.25rem;
+        border-radius: 1rem;
+    }
+    
+    /* Hide dashboard sidebar labels on mobile */
+    .dashboard-card .text-gray-500.text-sm {
+        font-size: 0.625rem;
+    }
+    
+    /* Dashboard text adjustments */
+    .dashboard-card .text-4xl {
+        font-size: 1.5rem !important;
+    }
+    
+    .dashboard-card .text-2xl {
+        font-size: 1rem !important;
+    }
+    
+    .dashboard-card .text-sm {
+        font-size: 0.6875rem !important;
+    }
+    
+    .dashboard-card .text-xs {
+        font-size: 0.5625rem !important;
+    }
+    
+    /* Dashboard header bar */
+    .dashboard-card .h-14 {
+        height: 2.5rem;
+        padding-left: 0.75rem;
+        padding-right: 0.75rem;
+    }
+    
+    .dashboard-card .h-14 .w-3 {
+        width: 0.5rem;
+        height: 0.5rem;
+    }
+    
+    .dashboard-card .h-14 .h-2 {
+        width: 3rem !important;
+    }
+    
+    .dashboard-card .h-14 .h-8 {
+        width: 1.5rem;
+        height: 1.5rem;
+        font-size: 0.5rem;
+    }
+    
+    /* Dashboard content padding */
+    .dashboard-card .p-8 {
+        padding: 0.75rem !important;
+    }
+    
+    /* Dashboard charts grid */
+    .dashboard-card .gap-8 {
+        gap: 0.75rem !important;
+    }
+    
+    .dashboard-card .gap-4 {
+        gap: 0.375rem !important;
+    }
+    
+    .dashboard-card .gap-2 {
+        gap: 0.25rem !important;
+    }
+    
+    /* Dashboard chart cards */
+    .dashboard-card .bg-\[\#0a0a0a\] {
+        padding: 0.5rem !important;
+        border-radius: 0.5rem;
+    }
+    
+    /* Dashboard buttons */
+    .dashboard-card button {
+        padding: 0.25rem 0.5rem !important;
+        font-size: 0.5rem !important;
+        border-radius: 0.375rem;
+    }
+    
+    /* Marquee / Trust Bar */
+    .marquee-content {
+        gap: 2rem;
+    }
+    
+    .marquee-content > div {
+        font-size: 1rem !important;
+    }
+    
+    .marquee-content .w-6 {
+        width: 1rem !important;
+        height: 1rem !important;
+    }
+    
+    /* Integration Cards */
+    .integration-card {
+        height: auto !important;
+        padding: 1rem !important;
+    }
+    
+    .integration-card span {
+        font-size: 0.875rem !important;
+    }
+    
+    .integration-icon {
+        width: 2rem;
+        height: 2rem;
+        font-size: 0.75rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    /* Pricing Cards */
+    .pricing-card {
+        padding: 1.25rem;
+    }
+    
+    .pricing-card .text-4xl {
+        font-size: 2rem !important;
+    }
+    
+    /* Badge Text */
+    .pricing-badge {
+        font-size: 0.625rem;
+        padding: 0.125rem 0.375rem;
+    }
+    
+    /* Hero Badge */
+    .animate-\[float_4s_ease-in-out_infinite\] span.text-xs {
+        font-size: 0.625rem !important;
+    }
+}
+
+/* Small Mobile Devices (max-width: 480px) */
 @media (max-width: 480px) {
+    /* Hero Section - More padding on very small screens */
+    section[aria-labelledby="hero-title"] {
+        padding-top: 5.5rem !important;
+    }
+    
+    /* Further reduce hero title */
+    h1 {
+        font-size: clamp(1.75rem, 9vw, 2.25rem) !important;
+    }
+    
+    /* Buttons - Full Width */
     .btn-primary,
     .btn-secondary {
         width: 100%;
-        padding: 1rem 1.5rem;
+        padding: 0.875rem 1.25rem;
+        font-size: 0.875rem;
+    }
+    
+    /* Hero CTAs */
+    .btn-glow {
+        padding: 0.875rem 1rem !important;
+        font-size: 0.875rem !important;
+    }
+    
+    /* Section Spacing (except hero which has custom padding) */
+    section:not([aria-labelledby="hero-title"]) {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+    
+    /* Cards Grid */
+    .card-futuristic {
+        padding: 1rem;
+    }
+    
+    /* Dashboard */
+    .dashboard-card .text-4xl {
+        font-size: 1.25rem !important;
+    }
+    
+    .dashboard-card .text-2xl {
+        font-size: 0.875rem !important;
+    }
+    
+    /* Hide some dashboard elements on very small screens */
+    .dashboard-card .w-48 {
+        display: none !important;
+    }
+    
+    /* Footer */
+    footer {
+        padding-top: 2rem;
+    }
+    
+    footer h4 {
+        font-size: 0.875rem;
+        margin-bottom: 0.75rem;
+    }
+    
+    footer .space-y-2 > li {
+        margin-top: 0.375rem;
+    }
+    
+    /* Copyright text */
+    footer .text-xs {
+        font-size: 0.625rem;
+        line-height: 1.4;
+    }
+}
+
+/* Extra Small Devices (max-width: 375px) */
+@media (max-width: 375px) {
+    h1 {
+        font-size: 1.625rem !important;
+    }
+    
+    h2 {
+        font-size: 1.375rem !important;
+    }
+    
+    h3 {
+        font-size: 1rem !important;
+    }
+    
+    body {
+        font-size: 14px;
+    }
+    
+    /* Pricing values */
+    .pricing-card .text-4xl {
+        font-size: 1.75rem !important;
+    }
+    
+    /* Even smaller dashboard */
+    .dashboard-card {
+        margin-left: -0.5rem;
+        margin-right: -0.5rem;
     }
 }
